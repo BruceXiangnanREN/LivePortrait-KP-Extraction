@@ -17,6 +17,11 @@ class ArgumentConfig(PrintableConfig):
     driving:  Annotated[str, tyro.conf.arg(aliases=["-d"])] = make_abs_path('../../assets/examples/driving/d0.mp4')  # path to driving video or template (.pkl format)
     output_dir: Annotated[str, tyro.conf.arg(aliases=["-o"])] = 'animations/'  # directory to save output video
 
+    ########## input for annotation arguments ##########
+    input_video_dir: Annotated[str, tyro.conf.arg(aliases=["-ivd"])] = make_abs_path('../../assets/examples/driving/')
+    output_annotation_dir: Annotated[str, tyro.conf.arg(aliases=["-oad"])] = make_abs_path('../../assets/examples/output_annotation/')
+    output_annotation_file: Annotated[str, tyro.conf.arg(aliases=["-oaf"])] = make_abs_path('../../assets/examples/output_annotation/')
+
     ########## inference arguments ##########
     flag_use_half_precision: bool = True  # whether to use half precision (FP16). If black boxes appear, it might be due to GPU incompatibility; set to False.
     flag_crop_driving_video: bool = False  # whether to crop the driving video, if the given driving info is a video
