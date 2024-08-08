@@ -33,6 +33,10 @@ def fast_check_args(args: ArgumentConfig):
 
 def main():
     """
+    ivd -> input video directory
+    oad -> output annotation directory
+
+    exmaple command:
     -ivd /home/xiangnanren/PycharmProjects/data/vox2_tiny/videos
     -oad /home/xiangnanren/PycharmProjects/data/vox2_tiny/annotations
     """
